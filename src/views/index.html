@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets1/img/LOGOTIPO (2).png">
+    <link rel="icon" type="image/png" href="/assets1/img/LOGOTIPO (2).png">
+    <title>
+        Cryptoway
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="/assets1/css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="/assets1/css/blk-design-system-pro.mine209.css?v=1.0.0" rel="stylesheet" />
+    <style>
+        .navbar {
+            background-color: #ff8d72;
+        }
+
+        .centered {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="landing-page" onload="GetData()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="#index" rel="tooltip" data-placement="bottom">
+                    <img src="/assets1/img/LOGOTIPO (3).png" width="180px" alt="logo">
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a>
+                                <img src="/assets1/img/LOGOTIPO (3).png" width="100px" alt="logo">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close text-right">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <i class="tim-icons icon-simple-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#index">
+                            <i class="tim-icons icon-world"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#exchange">
+                            <i class="tim-icons icon-chart-bar-32"></i> Exchange
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="tim-icons icon-chat-33"></i> Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Navbar -->
+    <div id="index" class="wrapper">
+        <div class="page-header">
+            <img src="/assets1/img/blob.png" class="path">
+            <img src="/assets1/img/path2.png" class="path2">
+            <img src="/assets1/img/triunghiuri.png" class="shapes triangle">
+            <img src="/assets1/img/waves.png" class="shapes wave">
+            <img src="/assets1/img/patrat.png" class="shapes squares">
+            <img src="/assets1/img/cercuri.png" class="shapes circle">
+            <div class="container">
+                <div class="row row-grid justify-content-between align-items-center text-left">
+                    <div class="col-lg-6 col-md-6">
+                        <img src="/assets1/img/LOGOTIPO (3).png" style="padding: 25px;" alt="">
+
+                        <p class="text-white mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            consequatur voluptatum dignissimos inventore ullam similique accusantium neque
+                            cumque
+                            quibusdam! Nostrum corporis error dolores similique pariatur! Voluptatum quidem asperiores
+                            excepturi deserunt</p>
+                    </div>
+                    <div class="col-lg-4 col-md-5">
+                        <img src="/assets1/img/bitcoin2.png" alt="Circle image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="exchange">
+            <br>
+            <img src="/assets1/img/path3.png" class="path">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="typography-line">
+                            <hr class="line-info">
+                            <h1>Criptomonedas</h1>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 id="precio_dolar" class="text-success text-center"></h3>
+                        <h4 id="sell_percent" class="text-center"></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 id="precio_euro" class="text-info text-center"></h3>
+                        <h4 id="buy_percent" class="text-center"></h4>
+                    </div>
+                    <div class="container" style="margin-bottom:70px;">
+                        <div class="row">
+                            <div class="col-md-4  col-sm-12 p-3">
+                                <button onclick="changeCoin('ARS')" class="btn btn-success btn-lg"
+                                    style="z-index: 20;margin: auto;display: block;">ARS</button>
+                            </div>
+                            <div class="col-md-4  col-sm-12 p-3">
+                                <button onclick="changeCoin('USD')" class="btn btn-warning btn-lg"
+                                    style="z-index: 20;margin: auto;display: block;">USD</button>
+                            </div>
+                            <div class="col-md-4  col-sm- p-3">
+                                <button onclick="changeCoin('EUR')" class="btn btn-neutral btn-lg"
+                                    style="z-index: 20;margin: auto;display: block;">EUR</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bitcoin -->
+
+                    <div class="col-md-4">
+                        <div id="btc" class="card card-coin card-plain" style="margin-bottom:50px;">
+                            <div class="card-header">
+                                <br>
+                                <img src="/assets1/img/bitcoin1.png" class="img-center img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-uppercase">Bitcoin</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span style="align-self: center;">Compra</span>
+                                        </div>
+                                        <hr class="line" style="background-color: #f7931a;">
+                                        <div class="centered">
+                                            <a id="btc-c" class="btn btn-simple text-white"
+                                                style="background-color: #f7931a;" href="#contact">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span>Venta</span>
+                                        </div>
+
+                                        <hr class="line" style="background-color: #f7931a;">
+                                        <div class="centered">
+                                            <a id="btc-v" class="btn btn-simple text-white"
+                                                style="background-color: #f7931a;" href="#contact"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fin bitcoin-->
+
+                    <!-- Etherium -->
+                    <div class="col-md-4">
+                        <div id="eth" class="card card-coin card-plain" style="margin-bottom:50px;">
+                            <div class="card-header">
+                                <br>
+                                <img src="/assets1/img/etherum1.png" class="img-center img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-uppercase">Ethereum</h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span style="align-self: center;">Compra</span>
+                                        </div>
+                                        <hr class="line" style="background-color: #627eea;">
+                                        <div class="centered">
+                                            <a id="eth-c" class="btn btn-simple text-white"
+                                                style="background-color: #627eea;" href="#contact">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span>Venta</span>
+                                        </div>
+
+                                        <hr class="line" style="background-color: #627eea;">
+                                        <div class="centered">
+                                            <a id="eth-v" class="btn btn-simple text-white"
+                                                style="background-color: #627eea;" href="#contact"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fin Etherium-->
+
+                    <!-- Litecoin -->
+
+                    <div class="col-md-4">
+                        <div id="ltc" class="card card-coin card-plain" style="margin-bottom:50px;">
+                            <div class="card-header">
+                                <br>
+                                <img src="/assets1/img/litecoin.png" class="img-center img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-uppercase">Litecoin</h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span style="align-self: center;">Compra</span>
+                                        </div>
+                                        <hr class="line" style="background-color: #777777;">
+                                        <div class="centered">
+                                            <a id="ltc-c" class="btn btn-simple text-white"
+                                                style="background-color: #777777;" href="#contact">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span>Venta</span>
+                                        </div>
+
+                                        <hr class="line" style="background-color: #777777;">
+                                        <div class="centered">
+                                            <a id="ltc-v" class="btn btn-simple text-white"
+                                                style="background-color: #777777;" href="#contact"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fin Litecoin-->
+
+                    <!-- Bitcoin Cash -->
+
+                    <div class="col-md-4">
+                        <div id="bch" class="card card-coin card-plain" style="margin-bottom:50px;">
+                            <div class="card-header">
+                                <br>
+                                <img src="/assets1/img/bitcoincash.png" class="img-center img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-uppercase">Bitcoin Cash</h4>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span style="align-self: center;">Compra</span>
+                                        </div>
+                                        <hr class="line" style="background-color: #50ae94;">
+                                        <div class="centered">
+                                            <a id="bch-c" class="btn btn-simple text-white"
+                                                style="background-color: #50ae94;" href="#contact">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span>Venta</span>
+                                        </div>
+
+                                        <hr class="line" style="background-color: #50ae94;">
+                                        <div class="centered">
+                                            <a id="bch-v" class="btn btn-simple text-white"
+                                                style="background-color: #50ae94;" href="#contact"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fin bitcoincash-->
+
+                    <!-- Dai -->
+
+                    <div class="col-md-4">
+                        <div id="dai" class="card card-coin card-plain" style="margin-bottom:50px;">
+                            <div class="card-header">
+                                <br>
+                                <img src="/assets1/img/bitcoin.png" class="img-center img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-uppercase">DAI</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span style="align-self: center;">Compra</span>
+                                        </div>
+                                        <hr class="line" style="background-color: #FAB62B;">
+                                        <div class="centered">
+                                            <a id="dai-c" class="btn btn-simple text-white"
+                                                style="background-color: #FAB62B;" href="#contact">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span>Venta</span>
+                                        </div>
+
+                                        <hr class="line" style="background-color: #FAB62B;">
+                                        <div class="centered">
+                                            <a id="dai-v" class="btn btn-simple text-white"
+                                                style="background-color: #FAB62B;" href="#contact"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fin Dai-->
+
+                    <!-- TETHER  -->
+
+                    <div class="col-md-4">
+                        <div id="{{key}}" class="card card-coin card-plain" style="margin-bottom:50px;">
+                            <div class="card-header">
+                                <br>
+                                <img src="/assets1/img/bitcoin.png" class="img-center img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-uppercase">Tether (USDT)</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span style="align-self: center;">Compra</span>
+                                        </div>
+                                        <hr class="line" style="background-color: #8dc351;">
+                                        <div class="centered">
+                                            <a id="eth-c" class="btn btn-simple text-white"
+                                                style="background-color: #8dc351;" href="#contact">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="centered">
+                                            <span>Venta</span>
+                                        </div>
+
+                                        <hr class="line" style="background-color: #8dc351;">
+                                        <div class="centered">
+                                            <a id="eth-v" class="btn btn-simple text-white"
+                                                style="background-color: #8dc351;" href="#contact"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fin bitcoin-->
+
+                    <br>
+                </div>
+            </div>
+        </section>
+
+        <div id="contact" class="social-line social-line-white text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <h1 class="title">Contactanos</h1>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="https://t.me/echarri/" target="_blank" class="btn btn-warning btn-lg"
+                            style="font-size: 1.4em;" type="button">
+                            <i class="fab fa-telegram p-1"></i>Hernán
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+54 9 3424 620896" target="_blank"
+                            class="btn btn-warning btn-lg" style="font-size: 1.4em;" type="button">
+                            <i class="fab fa-whatsapp p-1"></i>Hernán
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="https://t.me/blockchain_rocks/" target="_blank" class="btn btn-warning btn-lg"
+                            style="font-size: 1.4em;width:193px;" type="button">
+                            <i class="fab fa-telegram"></i> Iñaki
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+54 9 3435 125637" target="_blank"
+                            class="btn btn-warning btn-lg" style="font-size: 1.4em;width:193px;" type="button">
+                            <i class="fab fa-whatsapp"></i> Iñaki
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="https://t.me/davidmenendezz/" target="_blank" class="btn btn-warning btn-lg"
+                            style="font-size: 1.4em;width:193px;" type="button">
+                            <i class="fab fa-telegram"></i> David
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3 class="title">Redes sociales:</h3>
+                        <div class="btn-wrapper profile text-left">
+                            <a target="_blank" href="#" class="btn btn-icon btn-neutral btn-round btn-simple"
+                                data-toggle="tooltip" data-original-title="Siguenos">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a target="_blank" href="#" class="btn btn-icon btn-neutral btn-round btn-simple"
+                                data-toggle="tooltip" data-original-title="Like en Face">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright float-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, Usaurios-Dev
+            </div>
+        </footer>
+    </div>
+    <!--   Core JS Files   -->
+    <!--   Core JS Files   -->
+    <script src="/assets1/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="/assets1/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="/assets1/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/assets1/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="/assets1/js/plugins/bootstrap-switch.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="/assets1/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <!-- Chart JS -->
+    <script src="/assets1/js/plugins/chartjs.min.js"></script>
+    <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+    <script src="/assets1/js/plugins/moment.min.js"></script>
+    <script src="/assets1/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <script src="/assets/js/plugins/slick.js" type="text/javascript"></script>
+    <!--  Plugin for the blob animation -->
+    <script src="/assets/js/plugins/anime.min.js" type="text/javascript"></script>
+    <!-- Chart JS -->
+    <script src="/assets/js/plugins/chartjs.min.js"></script>
+    <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+    <script src="/assets/js/plugins/moment.min.js"></script>
+    <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+    <script src="/assets/js/plugins/bootstrap-tagsinput.js"></script>
+    <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="/assets/js/plugins/bootstrap-selectpicker.js" type="text/javascript"></script>
+    <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+    <script src="/assets1/demo/demo.js"></script>
+    <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
+    <script src="/assets1/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+    <script src="/assets1/js/main.js" type="text/javascript"></script>
+    <script src="/assets1/js/number.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+            demo.initLandingPageChart();
+        });
+    </script>
+</body>
+
+</html>
